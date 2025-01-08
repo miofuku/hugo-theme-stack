@@ -37,8 +37,8 @@ params:
             default: Licensed under CC BY-NC-SA 4.0
 
     comments:
-        enabled: false
-        provider: disqus
+        enabled: true
+        provider: gitalk
 
         disqusjs:
             shortname:
@@ -107,19 +107,38 @@ params:
             lang:
 
         gitalk:
-            owner:
-            admin:
-            repo:
-            clientID:
-            clientSecret:
+            owner: miofuku	
+            admin: miofuku
+            repo: https://github.com/miofuku/comments
+            clientID: Ov23liOW4w8pBVIdkMKs
+            clientSecret: 628d1712b24d52021080f7a3f100d5998ef91f6a
 
         cusdis:
             host:
             id:
 
     widgets:
-        homepage: []
-        page: []
+        homepage:
+            - type: search
+            - type: archives
+              params:
+                  limit: 5
+            - type: categories
+              params:
+                  limit: 10
+            - type: tag-cloud
+              params:
+                  limit: 30
+        page:
+            - type: archives
+              params:
+                  limit: 5
+            - type: categories
+              params:
+                  limit: 10
+            - type: tag-cloud
+              params:
+                  limit: 30
 
     opengraph:
         twitter:
