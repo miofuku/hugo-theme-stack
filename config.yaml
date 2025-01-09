@@ -134,7 +134,6 @@ params:
             repo: comments
             clientID: Ov23liOW4w8pBVIdkMKs
             clientSecret: 628d1712b24d52021080f7a3f100d5998ef91f6a
-            proxy: 'https://cors-anywhere.herokuapp.com/https://api.github.com'
 
         cusdis:
             host:
