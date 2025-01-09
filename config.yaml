@@ -131,7 +131,7 @@ params:
         gitalk:
             owner: miofuku	
             admin: miofuku
-            repo: https://github.com/miofuku/comments.git
+            repo: comments
             clientID: Ov23liOW4w8pBVIdkMKs
             clientSecret: 628d1712b24d52021080f7a3f100d5998ef91f6a
 
