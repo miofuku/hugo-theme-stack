@@ -43,7 +43,7 @@ params:
     sidebar:
         compact: false
         emoji: 🥨 
-        subtitle: The greatest sound is silent, the greatest form is shapeless. 大音希声 大象无形
+        subtitle: The greatest sound is silent, the greatest form is shapeless. 
         avatar:
             enabled: true
             local: true
