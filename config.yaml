@@ -144,9 +144,6 @@ params:
         homepage:
             - type: search
               params: {}
-            - type: archives
-              params:
-                  limit: 5
             - type: categories
               params:
                   limit: 10
@@ -154,9 +151,6 @@ params:
               params:
                   limit: 30
         page:
-            - type: archives
-              params:
-                  limit: 5
             - type: categories
               params:
                   limit: 10
@@ -167,7 +161,7 @@ params:
     opengraph:
         twitter:
             # Your Twitter username
-            site:
+            site: WillliVentures
 
             # Available values: summary, summary_large_image
             card: summary_large_image
