@@ -1,5 +1,5 @@
 <article>
-    <a href="{{ .RelPermalink }}">
+    <a href="{{ .RelPermalink }}" title="{{ .Title }} - Read full article">
         <div class="article-details">
             <h2 class="article-title">
                 {{- .Title -}}
@@ -30,6 +30,7 @@
                         width="{{ $Width }}"
                         height="{{ $Height }}" 
                         alt="{{ .Title }}"
+                        title="Featured image of post {{ .Title }}"
                         loading="lazy">
                 {{ else }}
                     <img src="{{ $image.permalink }}" loading="lazy" alt="Featured image of post {{ .Title }}" />

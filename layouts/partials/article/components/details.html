@@ -2,7 +2,13 @@
     {{ if .Params.categories }}
     <header class="article-category">
         {{ range (.GetTerms "categories") }}
-            <a href="{{ .RelPermalink }}" {{ with .Params.style }}style="background-color: {{ .background }}; color: {{ .color }};"{{ end }}>
+            <a href="{{ .RelPermalink }}" 
+                title="View all posts in category '{{ .Title }}'"
+                class="category-link"
+                {{- if .Params.style -}}
+                    data-bg-color="{{ .Params.style.background }}" 
+                    data-color="{{ .Params.style.color }}"
+                {{- end -}}>
                 {{ .LinkTitle }}
             </a>
         {{ end }}
@@ -11,7 +17,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="{{ .RelPermalink }}">
+            <a href="{{ .RelPermalink }}" title="Read '{{ .Title }}'">
                 {{- .Title -}}
             </a>
         </h2>

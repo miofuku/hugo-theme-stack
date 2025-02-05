@@ -23,7 +23,8 @@
                         width="{{ $Width }}" 
                         height="{{ $Height }}" 
                         loading="lazy"
-                        alt="Featured image of post {{ .Title }}" />
+                        alt="Featured image of post {{ .Title }}"
+                        title="Featured image of post {{ .Title }}" />
                 {{ else }}
                     <img src="{{ $image.permalink }}" loading="lazy" alt="Featured image of post {{ .Title }}" />
                 {{ end }}

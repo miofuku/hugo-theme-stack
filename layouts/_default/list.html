@@ -75,7 +75,14 @@
         {{ end }}
     </section>
 
-    {{- partial "pagination.html" . -}}
+    <nav class="pagination">
+        {{ if .Paginator.HasPrev }}
+            <a href="{{ .Paginator.Prev.URL }}" title="Go to page {{ .Paginator.Prev.PageNumber }}">Previous</a>
+        {{ end }}
+        {{ if .Paginator.HasNext }}
+            <a href="{{ .Paginator.Next.URL }}" title="Go to page {{ .Paginator.Next.PageNumber }}">Next</a>
+        {{ end }}
+    </nav>
 
     {{ partialCached "footer/footer" . }}
 {{ end }}
