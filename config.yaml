@@ -26,6 +26,16 @@ module:
         min: "0.87.0"
 
 params:
+    keywords: 
+        - life
+        - technology
+        - economy
+        - finance
+    robots:
+        - index
+        - follow
+    author: miochat
+    description: Observing the connections between oneself as a living being and the entire universe.
     mainSections:
         - post
     featuredImageField: image
@@ -43,7 +53,7 @@ params:
     sidebar:
         compact: false
         emoji: 🥨 
-        subtitle: Observing the connections between oneself as a living being and the entire universe.
+        subtitle: A blog about life, technology, and everything in between.
         avatar:
             enabled: true
             local: true
