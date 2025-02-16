@@ -1,17 +1,27 @@
-<!-- Use site subtitle by default -->
-{{ $description := .Site.Params.sidebar.subtitle }}
+{{ $description := "" }}
 
-<!-- Seprate description exists -->
-{{ if .Site.Params.description }}
+<!-- For the homepage -->
+{{ if .IsHome }}
     {{ $description = .Site.Params.description }}
+{{ else if .IsSection }}
+    <!-- For section pages (categories, tags, etc) -->
+    {{ with .Description }}
+        {{ $description = . }}
+    {{ else }}
+        {{ $description = printf "All posts in %s" .Title }}
+    {{ end }}
+{{ else if .IsPage }}
+    <!-- For individual posts/pages -->
+    {{ with .Description }}
+        {{ $description = . }}
+    {{ else }}
+        {{ $description = .Summary }}
+    {{ end }}
 {{ end }}
 
-{{ if .Description }}
-    <!-- Page description exists -->
-    {{ $description = .Description }}
-{{ else if .IsPage }}
-    <!-- Use page summary -->
-    {{ $description = .Summary }}
+<!-- Fallback to site description if nothing else is set -->
+{{ if not $description }}
+    {{ $description = .Site.Params.description }}
 {{ end }}
 
 {{ return (replaceRE "\n" " " $description | plainify) }}
