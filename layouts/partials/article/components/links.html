@@ -21,7 +21,10 @@
                         {{ $permalink = .RelPermalink }}
                     {{ end }}
                     <div class="article-image">
-                        <img src="{{ $permalink }}" loading="lazy">
+                        <img src="{{ $permalink }}" 
+                             alt="Image for {{ $link.title }}"
+                             title="{{ with $link.description }}{{ . }}{{ else }}{{ $link.website }}{{ end }}"
+                             loading="lazy">
                     </div>
                 {{ end }}
             </a>
